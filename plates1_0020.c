@@ -1,3 +1,34 @@
+/*
+ * A program to simulate tectonics.
+ *
+ * Copyright 1988 by Mark Isaak.
+ * You may distribute this however you like, as long as you don't sell it
+ * and you keep this notice in it.
+ *
+ * Wish list:
+ *      Do it on a sphere, not a square torus
+ *	Give plates angular momentum
+ *	Make some constants variable
+ *	Horsts and grabens
+ *	Let 2 plates fuse together and/or 1 plate split apart sometimes
+ *	Astroblemes
+ *	Take density of rock into account
+ */
+/*
+ * Some additional notes, 1998-06-15, Mark J. Stock, mstock@umich.edu
+ *
+ * I added two commands: 'f' will advance five time steps, and 'g'
+ * will write a 16-bit int, ASCII, grayscale PGM image of the land
+ * elevations. Any problems with that code is from my own fault.
+ * I may get to addressing Mark Isaak's wish list, but probably not 
+ * for a while.
+ *
+ * Compile with:
+ *    cc -O -o plates plates.c -lm
+ */
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -1072,3 +1103,4 @@ int main(int argc, char *argv[]) {
     
     return 0;
 }
+
